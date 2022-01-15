@@ -4,11 +4,14 @@
   "description": "prototipo de tienda",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "javaScript",
-    "React"
+    "React",
+    "sass"
   ],
   "author": "Jose Morales",
   "license": "MIT",
@@ -29,6 +32,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.4.6",
     "sass": "^1.47.0",
