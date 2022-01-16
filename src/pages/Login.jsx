@@ -1,29 +1,30 @@
-import React from 'react'
-import '@styles/login.scss'
+import React from 'react';
+//styles
+import '@styles/login.scss';
+import logo from '@logos/logo_yard_sale.svg';
 
-function Login(){
+function Login(){ 
     return(
         <React.Fragment>
             <div className="login">
-
                 <div className="form-container">
-
-                    <img 
-                        src="./logos/logo_yard_sale.svg" 
-                        alt="logo" 
-                        className="logo"
-                    />
-
-                    <h1 className="title">Create a new password</h1>
-                    
-                    <p className="subtitle">Enter a new passwrd for yue account</p>
+                    <img src={logo} alt="logo" className="logo"/>
 
                     <form action="/" className="form">
+
+                        <label for="email" className="label">
+                            Email address
+                        </label>
+                        <input 
+                            type="text" 
+                            id="email" 
+                            placeholder="platzi@example.cm" 
+                            className="input input-email"
+                        />
 
                         <label for="password" className="label">
                             Password
                         </label>
-
                         <input 
                             type="password" 
                             id="password" 
@@ -31,23 +32,18 @@ function Login(){
                             className="input input-password"
                         />
 
-                        <label for="new-password" className="label">
-                            Password
-                        </label>
-
-                        <input 
-                            type="password" 
-                            id="new-password" 
-                            placeholder="*********" 
-                            class="input input-password"
-                        />
-
                         <input 
                             type="submit" 
-                            value="Confirm" 
+                            value="Log in" 
                             className="primary-button login-button"
                         />
+
+                        <a href="/">Forgot my password</a>
                     </form>
+
+                    <button className="secondary-button signup-button">
+                        Sign up
+                    </button>
                 </div>
             </div>
         </React.Fragment>

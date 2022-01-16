@@ -1,12 +1,20 @@
 import React from "react";
-import {Layout} from '@containers/Layout'
+import { AppContext } from "../context/AppContext";
+import { Layout } from '@containers/Layout';
+import { Product } from '@components/Product';
+
 
 function Home(){
+    
+    const {
+        state,
+    } = React.useContext(AppContext);
+
     return(
         <React.Fragment>
             <Layout>
-                <h1>HOLA MUNDO</h1>
-                <h2>HI WORLD</h2>
+                <Product/> 
+                <p>{state}</p>
             </Layout>
         </React.Fragment>
     );
